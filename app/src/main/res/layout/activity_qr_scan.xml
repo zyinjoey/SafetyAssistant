@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/module_scan"
+            app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+            app:title="@string/qr_scan_title"
+            app:titleTextColor="@color/text_on_primary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- 扫描预览区域 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/scan_frame_size"
+            android:layout_height="@dimen/scan_frame_size"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="@dimen/scan_frame_corner">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/padding_large"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:contentDescription="@string/qr_scan_tip"
+                    app:tint="@color/module_scan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/qr_scan_tip"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_medium" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 操作按钮 -->
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="@dimen/scan_frame_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/button_background"
+            android:padding="@dimen/padding_medium"
+            android:text="开始扫描"
+            android:textColor="@color/text_on_primary"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="@dimen/scan_frame_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/button_secondary"
+            android:padding="@dimen/padding_medium"
+            android:text="切换摄像头"
+            android:textColor="@color/text_on_primary" />
+
+        <Button
+            android:id="@+id/btn_history"
+            android:layout_width="@dimen/scan_frame_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/button_secondary"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/history_scan"
+            android:textColor="@color/text_on_primary" />
+
+        <!-- 安全提示 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            app:cardBackgroundColor="@color/primary_light"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="安全提示"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="扫描二维码时，请确保二维码来源可靠，不要随意扫描陌生人提供的二维码，以防被骗。"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_small" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

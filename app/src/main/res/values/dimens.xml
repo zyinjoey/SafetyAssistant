@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 边距 -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+
+    <!-- 内边距 -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+
+    <!-- 卡片 -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+
+    <!-- 图标 -->
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+
+    <!-- 按钮 -->
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="button_corner_radius">26dp</dimen>
+
+    <!-- 文字大小 -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_large_title">24sp</dimen>
+
+    <!-- 模块卡片 -->
+    <dimen name="module_card_height">110dp</dimen>
+    <dimen name="module_icon_size">40dp</dimen>
+
+    <!-- 安全等级徽章 -->
+    <dimen name="badge_size">28dp</dimen>
+
+    <!-- 扫描框 -->
+    <dimen name="scan_frame_size">250dp</dimen>
+    <dimen name="scan_frame_corner">16dp</dimen>
+
+    <!-- 地图 -->
+    <dimen name="map_marker_size">32dp</dimen>
+
+    <!-- 历史记录 -->
+    <dimen name="record_item_height">80dp</dimen>
+
+    <!-- 用户头像 -->
+    <dimen name="avatar_size">56dp</dimen>
+</resources>

@@ -1,0 +1,34 @@
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> java.io.IOException: Unable to delete directory 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources'
+    Failed to delete some children. This might happen because a process has files open or has its working directory set in the target directory.
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rXC
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-eu
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fr-rCA
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-gu
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h480dp-land-v13
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h720dp-v13
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-he
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hy
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-in
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-it
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ja
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-kn
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ky
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-large-v4
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ldrtl-v17
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-lv
+    - and more ...
+    New files were found. This might happen because a process is still writing to the target directory.
+    - C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 13s

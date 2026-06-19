@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.SafetyAssistant" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <!-- 无标题栏主题 -->
+    <style name="Theme.SafetyAssistant.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 启动页主题 -->
+    <style name="Theme.SafetyAssistant.Splash" parent="Theme.SafetyAssistant.NoActionBar">
+        <item name="android:windowBackground">@color/primary</item>
+    </style>
+
+    <!-- 基础按钮样式 -->
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- 主要按钮 -->
+    <style name="Button.Primary" parent="Button">
+        <item name="android:background">@color/button_primary</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+    </style>
+
+    <!-- 危险按钮 -->
+    <style name="Button.Danger" parent="Button">
+        <item name="android:background">@color/button_danger</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+    </style>
+
+    <!-- 成功按钮 -->
+    <style name="Button.Success" parent="Button">
+        <item name="android:background">@color/button_success</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+    </style>
+
+    <!-- 基础卡片样式 -->
+    <style name="CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- 基础文字样式 -->
+    <style name="Text" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- 标题文字 -->
+    <style name="Text.Title" parent="Text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 副标题文字 -->
+    <style name="Text.Subtitle" parent="Text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!-- 正文文字 -->
+    <style name="Text.Body" parent="Text">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 提示文字 -->
+    <style name="Text.Hint" parent="Text">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+
+    <!-- 输入框样式 -->
+    <style name="EditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- 圆形头像样式 -->
+    <style name="CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

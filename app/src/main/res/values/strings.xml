@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">安全助手</string>
+
+    <!-- 主界面 -->
+    <string name="main_title">数字安全助手</string>
+    <string name="main_subtitle">守护您的数字安全</string>
+
+    <!-- 用户界面 -->
+    <string name="user_info">用户信息</string>
+    <string name="nickname">昵称</string>
+    <string name="phone_number">手机号</string>
+    <string name="security_level">安全等级</string>
+    <string name="emergency_contact">紧急联系人</string>
+    <string name="edit_profile">编辑资料</string>
+
+    <!-- 直播界面 -->
+    <string name="live_title">数字安全直播</string>
+    <string name="live_watching">正在观看</string>
+    <string name="live_lecturer">讲师</string>
+    <string name="course_list">课程列表</string>
+
+    <!-- 文本检测 -->
+    <string name="text_check_title">反诈文本检测</string>
+    <string name="text_check_hint">请输入短信、聊天记录或通知内容…</string>
+    <string name="text_check_button">开始检测</string>
+    <string name="text_result_safe">安全</string>
+    <string name="text_result_suspicious">可疑</string>
+    <string name="text_result_high_risk">高风险</string>
+
+    <!-- 二维码扫描 -->
+    <string name="qr_scan_title">二维码安全扫描</string>
+    <string name="qr_scan_tip">将二维码放入扫描框内</string>
+    <string name="qr_scan_result">扫描结果</string>
+
+    <!-- 地图导航 -->
+    <string name="map_title">地图导航</string>
+    <string name="map_search_hint">搜索地点</string>
+    <string name="map_nearby_police">附近派出所</string>
+    <string name="map_nearby_bank">附近银行</string>
+    <string name="map_nearby_operator">附近营业厅</string>
+    <string name="map_navigate">导航</string>
+    <string name="map_tip">点击下方按钮搜索或定位</string>
+    <string name="map_locate">获取当前位置</string>
+
+    <!-- 安全模式 -->
+    <string name="safe_mode_title">安全模式</string>
+    <string name="safe_mode_active">安全模式已启动</string>
+    <string name="safe_mode_call">一键呼叫</string>
+    <string name="safe_mode_sms">发送求助短信</string>
+    <string name="safe_mode_location">位置共享</string>
+    <string name="safe_mode_nearby">查找附近派出所</string>
+    <string name="safe_mode_exit">退出安全模式</string>
+
+    <!-- 语音助手 -->
+    <string name="voice_title">语音助手</string>
+    <string name="voice_wake_word">安全助手</string>
+    <string name="voice_listening">正在聆听…</string>
+    <string name="voice_speaking">正在播报…</string>
+    <string name="voice_tip">说出您的指令</string>
+
+    <!-- 历史记录 -->
+    <string name="history_title">历史记录</string>
+    <string name="history_check">检测记录</string>
+    <string name="history_scan">扫码记录</string>
+    <string name="history_sos">求助记录</string>
+    <string name="history_study">学习记录</string>
+    <string name="history_empty">暂无记录</string>
+
+    <!-- 反诈游戏 -->
+    <string name="game_title">反诈问答游戏</string>
+    <string name="game_start">开始游戏</string>
+    <string name="game_safe">安全信息</string>
+    <string name="game_scam">诈骗信息</string>
+    <string name="game_correct">回答正确！</string>
+    <string name="game_wrong">回答错误！</string>
+    <string name="game_score">得分</string>
+    <string name="game_tip">这是安全提示</string>
+
+    <!-- 通用 -->
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="share">分享</string>
+    <string name="loading">加载中…</string>
+    <string name="error">出错了</string>
+    <string name="success">操作成功</string>
+    <string name="permission_required">需要权限</string>
+    <string name="permission_camera">需要摄像头权限</string>
+    <string name="permission_location">需要位置权限</string>
+    <string name="permission_phone">需要电话权限</string>
+    <string name="permission_sms">需要短信权限</string>
+    <string name="permission_microphone">需要麦克风权限</string>
+
+    <!-- 安全提示 -->
+    <string name="safety_tip_1">警惕陌生来电，涉及转账需谨慎</string>
+    <string name="safety_tip_2">不要随意点击陌生链接</string>
+    <string name="safety_tip_3">保护个人信息，不要泄露验证码</string>
+    <string name="safety_tip_4">遇到可疑情况，及时报警</string>
+    <string name="safety_tip_5">定期更新密码，提高账户安全</string>
+
+    <!-- 风险等级 -->
+    <string name="risk_level_safe">安全</string>
+    <string name="risk_level_warning">警告</string>
+    <string name="risk_level_danger">危险</string>
+
+    <!-- 紧急情况 -->
+    <string name="emergency_sos">紧急求助</string>
+    <string name="emergency_police">拨打110</string>
+    <string name="emergency_contacts">紧急联系人</string>
+</resources>

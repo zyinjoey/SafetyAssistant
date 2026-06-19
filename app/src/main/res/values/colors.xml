@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色 - 渐变蓝 -->
+    <color name="primary">#667eea</color>
+    <color name="primary_dark">#5a67d8</color>
+    <color name="primary_light">#c3dafe</color>
+
+    <!-- 强调色 - 橙色 -->
+    <color name="accent">#f56565</color>
+    <color name="accent_dark">#e53e3e</color>
+    <color name="accent_light">#fed7d7</color>
+
+    <!-- 状态颜色 -->
+    <color name="safe_green">#48bb78</color>
+    <color name="warning_yellow">#ecc94b</color>
+    <color name="danger_red">#fc8181</color>
+
+    <!-- 背景色 -->
+    <color name="background">#f7fafc</color>
+    <color name="surface">#ffffff</color>
+    <color name="card_background">#ffffff</color>
+
+    <!-- 文字颜色 -->
+    <color name="text_primary">#1a202c</color>
+    <color name="text_secondary">#718096</color>
+    <color name="text_hint">#a0aec0</color>
+    <color name="text_on_primary">#ffffff</color>
+
+    <!-- 分隔线 -->
+    <color name="divider">#edf2f7</color>
+
+    <!-- 功能模块颜色 - 渐变色系 -->
+    <color name="module_live">#667eea</color>
+    <color name="module_check">#9f7aea</color>
+    <color name="module_scan">#4299e1</color>
+    <color name="module_map">#38b2ac</color>
+    <color name="module_safe">#ed8936</color>
+    <color name="module_voice">#4fd1c5</color>
+    <color name="module_history">#a0aec0</color>
+    <color name="module_game">#f6ad55</color>
+
+    <!-- 安全等级颜色 -->
+    <color name="level_low">#48bb78</color>
+    <color name="level_medium">#ecc94b</color>
+    <color name="level_high">#f56565</color>
+
+    <!-- 按钮颜色 -->
+    <color name="button_primary">#667eea</color>
+    <color name="button_secondary">#a0aec0</color>
+    <color name="button_danger">#f56565</color>
+    <color name="button_success">#48bb78</color>
+
+    <!-- 状态栏 -->
+    <color name="status_bar">#5a67d8</color>
+
+    <!-- 扫描框 -->
+    <color name="scan_frame">#ffffff</color>
+    <color name="scan_laser">#667eea</color>
+    <color name="scan_background">#80000000</color>
+
+    <!-- 阴影 -->
+    <color name="shadow">#1a000000</color>
+
+    <!-- Chip -->
+    <color name="chip_background">#f7fafc</color>
+</resources>

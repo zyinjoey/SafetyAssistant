@@ -1,0 +1,684 @@
+﻿Initialized native services in: C:\Users\18758\.gradle\native
+Initialized jansi services in: C:\Users\18758\.gradle\native
+Found daemon DaemonInfo{pid=115304, address=[2d40b88f-fc8e-4621-93d8-01064b2d63d6 port:64166, addresses:[/127.0.0.1]], state=Idle, lastBusy=1781862916120, context=DefaultDaemonContext[uid=11683d0c-22dd-4ded-bcfe-7a088a1dd67f,javaHome=D:\Android Studio\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\18758\.gradle\daemon,pid=115304,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=CN,-Duser.language=zh,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot (no JDK specified, using current Java home), daemonOpts=[-Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=CN, -Duser.language=zh, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=11683d0c-22dd-4ded-bcfe-7a088a1dd67f,javaHome=D:\Android Studio\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\18758\.gradle\daemon,pid=115304,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+
+  Looking for a different daemon...
+Removing 0 daemon stop events from registry
+Previous Daemon (98792) stopped at Fri Jun 19 17:41:52 CST 2026 after being idle for 2 minutes and not recently used and to reclaim system virtual memory
+Previous Daemon (107020) stopped at Fri Jun 19 17:56:59 CST 2026 after being idle for 2 minutes and not recently used and to reclaim system virtual memory
+Starting a Gradle Daemon, 2 busy and 1 incompatible and 2 stopped Daemons could not be reused, use --status for details
+Starting process 'Gradle build daemon'. Working directory: C:\Users\18758\.gradle\daemon\8.13 Command: C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin\java.exe --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=CN -Duser.language=zh -Duser.variant -cp C:\Users\18758\.gradle\wrapper\dists\gradle-8.13-all\54h0s9kvb6g2sinako7ub77ku\gradle-8.13\lib\gradle-daemon-main-8.13.jar -javaagent:C:\Users\18758\.gradle\wrapper\dists\gradle-8.13-all\54h0s9kvb6g2sinako7ub77ku\gradle-8.13\lib\agents\gradle-instrumentation-agent-8.13.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.13
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 12.327 secs.
+The client will now receive all logging from the daemon (pid: 115788). The daemon log file: C:\Users\18758\.gradle\daemon\8.13\daemon-115788.out.log
+Starting build in new daemon [memory: 2 GiB]
+Using 16 worker leases.
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot, JAVA_VERSION=21.0.4, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.4+7-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.4+7-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+Watching the file system is configured to be enabled if available
+Now considering [C:\Users\18758\Desktop\SafetyAssistant] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\18758\Desktop\SafetyAssistant\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\18758\Desktop\SafetyAssistant\build.gradle'.
+Included projects: [root project 'SafetyAssistant', project ':app']
+
+> Configure project :
+Evaluating root project 'SafetyAssistant' using build file 'C:\Users\18758\Desktop\SafetyAssistant\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '8.13.2', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '1.9.24', apply: false]
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\journal-1\file-access.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\resourceHashesCache.bin
+
+> Configure project :app
+Evaluating project ':app' using build file 'C:\Users\18758\Desktop\SafetyAssistant\app\build.gradle'.
+Resolved plugin [id: 'com.android.application']
+Resolved plugin [id: 'org.jetbrains.kotlin.android']
+Resolved plugin [id: 'org.jetbrains.kotlin.kapt']
+WARNING: The option setting 'android.overridePathCheck=true' is experimental.
+The current default is 'false'.
+Using default execution profile
+Using Kotlin Gradle Plugin gradle82 variant
+All projects evaluated.
+Task path ':app:assembleDebug' matched project ':app'
+Task name matched 'assembleDebug'
+Selected primary task 'assembleDebug' from project :app
+Tasks to be executed: [task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:dataBindingMergeDependencyArtifactsDebug', task ':app:generateDebugResValues', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:processDebugNavigationResources', task ':app:parseDebugLocalResources', task ':app:dataBindingGenBaseClassesDebug', task ':app:checkDebugAarMetadata', task ':app:compileDebugNavigationResources', task ':app:mapDebugSourceSetPaths', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:kaptGenerateStubsDebugKotlin', task ':app:kaptDebugKotlin', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:desugarDebugFileDependencies', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:dexBuilderDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug']
+Tasks that were excluded: []
+Resolve mutations for :app:preBuild (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:preBuild (Thread[#124,included builds,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[#124,included builds,5,main]) started.
+:app:preDebugBuild (Thread[#124,included builds,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[#124,included builds,5,main]) started.
+:app:mergeDebugNativeDebugMetadata (Thread[#124,included builds,5,main]) started.
+
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\buildOutputCleanup\outputFiles.bin
+Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[#124,included builds,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[#124,included builds,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+Caching disabled for task ':app:checkKotlinGradlePluginConfigurationErrors' because:
+  Build cache is disabled
+Task ':app:checkKotlinGradlePluginConfigurationErrors' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebug (Thread[#124,included builds,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebug (Thread[#124,included builds,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:dataBindingMergeDependencyArtifactsDebug' as it is up-to-date.
+Resolve mutations for :app:generateDebugResValues (Thread[#124,included builds,5,main]) started.
+:app:generateDebugResValues (Thread[#124,included builds,5,main]) started.
+
+> Task :app:generateDebugResValues UP-TO-DATE
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResValues' as it is up-to-date.
+Resolve mutations for :app:generateDebugResources (Thread[#124,included builds,5,main]) started.
+:app:generateDebugResources (Thread[#124,included builds,5,main]) started.
+
+> Task :app:generateDebugResources UP-TO-DATE
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\resourceHashesCache.bin
+Caching disabled for task ':app:generateDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResources' as it is up-to-date.
+Resolve mutations for :app:mergeDebugResources (Thread[#124,included builds,5,main]) started.
+:app:mergeDebugResources (Thread[#124,included builds,5,main]) started.
+
+> Task :app:mergeDebugResources UP-TO-DATE
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:mergeDebugResources' as it is up-to-date.
+Resolve mutations for :app:packageDebugResources (Thread[#124,included builds,5,main]) started.
+:app:packageDebugResources (Thread[#124,included builds,5,main]) started.
+
+> Task :app:packageDebugResources UP-TO-DATE
+Caching disabled for task ':app:packageDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:packageDebugResources' as it is up-to-date.
+Resolve mutations for :app:processDebugNavigationResources (Thread[#124,included builds,5,main]) started.
+:app:processDebugNavigationResources (Thread[#125,Execution worker,5,main]) started.
+
+> Task :app:processDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:processDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:parseDebugLocalResources (Thread[#125,Execution worker,5,main]) started.
+:app:parseDebugLocalResources (Thread[#125,Execution worker,5,main]) started.
+
+> Task :app:parseDebugLocalResources UP-TO-DATE
+Caching disabled for task ':app:parseDebugLocalResources' because:
+  Build cache is disabled
+Skipping task ':app:parseDebugLocalResources' as it is up-to-date.
+Resolve mutations for :app:dataBindingGenBaseClassesDebug (Thread[#125,Execution worker,5,main]) started.
+:app:dataBindingGenBaseClassesDebug (Thread[#125,Execution worker,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+Caching disabled for task ':app:dataBindingGenBaseClassesDebug' because:
+  Build cache is disabled
+Skipping task ':app:dataBindingGenBaseClassesDebug' as it is up-to-date.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[#125,Execution worker,5,main]) started.
+:app:checkDebugAarMetadata (Thread[#125,Execution worker,5,main]) started.
+
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAarMetadata' as it is up-to-date.
+Resolve mutations for :app:compileDebugNavigationResources (Thread[#125,Execution worker,5,main]) started.
+:app:compileDebugNavigationResources (Thread[#125,Execution worker,5,main]) started.
+
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:compileDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[#125,Execution worker,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[#125,Execution worker,5,main]) started.
+
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+Caching disabled for task ':app:mapDebugSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mapDebugSourceSetPaths' as it is up-to-date.
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[#125,Execution worker,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[#125,Execution worker,5,main]) started.
+
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createDebugCompatibleScreenManifests' as it is up-to-date.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[#125,Execution worker,5,main]) started.
+:app:extractDeepLinksDebug (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+Caching disabled for task ':app:extractDeepLinksDebug' because:
+  Build cache is disabled
+Skipping task ':app:extractDeepLinksDebug' as it is up-to-date.
+Resolve mutations for :app:processDebugMainManifest (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:processDebugMainManifest (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:processDebugMainManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugMainManifest' because:
+  Build cache is disabled
+Skipping task ':app:processDebugMainManifest' as it is up-to-date.
+Resolve mutations for :app:processDebugManifest (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:processDebugManifest (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:processDebugManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugManifest' because:
+  Build cache is disabled
+Skipping task ':app:processDebugManifest' as it is up-to-date.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:processDebugManifestForPackage (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+Custom actions are attached to task ':app:processDebugManifestForPackage'.
+Caching disabled for task ':app:processDebugManifestForPackage' because:
+  Build cache is disabled
+Skipping task ':app:processDebugManifestForPackage' as it is up-to-date.
+Resolve mutations for :app:processDebugResources (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:processDebugResources (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:processDebugResources UP-TO-DATE
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugResources' as it is up-to-date.
+Resolve mutations for :app:kaptGenerateStubsDebugKotlin (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:kaptGenerateStubsDebugKotlin (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:kaptGenerateStubsDebugKotlin UP-TO-DATE
+Caching disabled for task ':app:kaptGenerateStubsDebugKotlin' because:
+  Build cache is disabled
+Skipping task ':app:kaptGenerateStubsDebugKotlin' as it is up-to-date.
+Resolve mutations for :app:kaptDebugKotlin (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:kaptDebugKotlin (Thread[#127,Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:javaPreCompileDebug (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:javaPreCompileDebug (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:javaPreCompileDebug UP-TO-DATE
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\buildOutputCleanup\outputFiles.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\executionHistory\executionHistory.bin
+Caching disabled for task ':app:javaPreCompileDebug' because:
+  Build cache is disabled
+Skipping task ':app:javaPreCompileDebug' as it is up-to-date.
+Resolve mutations for :app:mergeDebugShaders (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugShaders (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugShaders UP-TO-DATE
+Caching disabled for task ':app:mergeDebugShaders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugShaders' as it is up-to-date.
+Resolve mutations for :app:compileDebugShaders (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:compileDebugShaders (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:compileDebugShaders NO-SOURCE
+Skipping task ':app:compileDebugShaders' as it has no source files and no previous output files.
+Resolve mutations for :app:generateDebugAssets (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:generateDebugAssets (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:generateDebugAssets UP-TO-DATE
+Skipping task ':app:generateDebugAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAssets (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugAssets (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugAssets UP-TO-DATE
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\journal-1\file-access.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\resourceHashesCache.bin
+Caching disabled for task ':app:mergeDebugAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugAssets' as it is up-to-date.
+Resolve mutations for :app:compressDebugAssets (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:compressDebugAssets (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:compressDebugAssets UP-TO-DATE
+Caching disabled for task ':app:compressDebugAssets' because:
+  Build cache is disabled
+Skipping task ':app:compressDebugAssets' as it is up-to-date.
+Resolve mutations for :app:checkDebugDuplicateClasses (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:checkDebugDuplicateClasses (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+Caching disabled for task ':app:checkDebugDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugDuplicateClasses' as it is up-to-date.
+Resolve mutations for :app:desugarDebugFileDependencies (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:desugarDebugFileDependencies (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+Caching disabled for task ':app:desugarDebugFileDependencies' because:
+  Build cache is disabled
+Skipping task ':app:desugarDebugFileDependencies' as it is up-to-date.
+Resolve mutations for :app:mergeExtDexDebug (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:mergeExtDexDebug (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeExtDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeExtDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeExtDexDebug' as it is up-to-date.
+Resolve mutations for :app:mergeLibDexDebug (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:mergeLibDexDebug (Thread[#126,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeLibDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeLibDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeLibDexDebug' as it is up-to-date.
+Resolve mutations for :app:mergeDebugJniLibFolders (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugJniLibFolders (Thread[#139,Execution worker Thread 15,5,main]) started.
+
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+Caching disabled for task ':app:mergeDebugJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugJniLibFolders' as it is up-to-date.
+Resolve mutations for :app:mergeDebugNativeLibs (Thread[#139,Execution worker Thread 15,5,main]) started.
+:app:mergeDebugNativeLibs (Thread[#139,Execution worker Thread 15,5,main]) started.
+
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+Skipping task ':app:mergeDebugNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[#134,Execution worker Thread 10,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[#134,Execution worker Thread 10,5,main]) started.
+
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+Skipping task ':app:stripDebugDebugSymbols' as it has no source files and no previous output files.
+Resolve mutations for :app:validateSigningDebug (Thread[#134,Execution worker Thread 10,5,main]) started.
+:app:validateSigningDebug (Thread[#134,Execution worker Thread 10,5,main]) started.
+
+> Task :app:validateSigningDebug UP-TO-DATE
+Caching disabled for task ':app:validateSigningDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:validateSigningDebug' as it is up-to-date.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[#134,Execution worker Thread 10,5,main]) started.
+:app:writeDebugAppMetadata (Thread[#134,Execution worker Thread 10,5,main]) started.
+
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugAppMetadata' as it is up-to-date.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[#134,Execution worker Thread 10,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[#134,Execution worker Thread 10,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugSigningConfigVersions' as it is up-to-date.
+
+> Task :app:kaptDebugKotlin
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\resourceHashesCache.bin
+Caching disabled for task ':app:kaptDebugKotlin' because:
+  Build cache is disabled
+Task ':app:kaptDebugKotlin' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':app:kaptDebugKotlin'.
+Running kapt annotation processing using the Gradle Worker API
+Using workers NONE isolation mode to run kapt
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\resourceHashesCache.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\executionHistory\executionHistory.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\buildOutputCleanup\outputFiles.bin
+Resolve mutations for :app:compileDebugKotlin (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:compileDebugKotlin (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:compileDebugKotlin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\journal-1\file-access.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\resourceHashesCache.bin
+Caching disabled for task ':app:compileDebugKotlin' because:
+  Build cache is disabled
+Task ':app:compileDebugKotlin' is not up-to-date because:
+  Output property 'classpathSnapshotProperties.classpathSnapshotDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\kotlin\compileDebugKotlin\classpath-snapshot\shrunk-classpath-snapshot.bin has been removed.
+  Output property 'destinationDirectory' file C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug\META-INF has been removed.
+  Output property 'destinationDirectory' file C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:compileDebugKotlin'.
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\kotlin', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+Kotlin source files: C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\EmergencyContactAdapter.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\GameActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\HistoryActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\LiveActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\LivePlayerActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\MainActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\MapActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\QRScanActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\SafeModeActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\TextCheckActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\UserActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\activities\VoiceActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\AppDatabase.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\Converters.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\dao\CheckResultDao.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\dao\GameScoreDao.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\dao\ScanRecordDao.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\dao\SOSRecordDao.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\dao\StudyRecordDao.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\data\dao\UserDao.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\CheckResult.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\Course.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\GameModels.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\Location.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\ScanRecord.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\SOSRecord.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\StudyRecord.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\models\User.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\SafetyAssistantApp.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\utils\BaseActivity.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\utils\DataManager.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\utils\DateUtils.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\utils\LocationService.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\utils\PermissionUtils.kt, C:\Users\18758\Desktop\SafetyAssistant\app\src\main\java\com\example\safetyassistant\utils\TextCheckUtils.kt
+Java source files: C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityGameBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityHistoryBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityLiveBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityLivePlayerBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityMainBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityMapBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityQrScanBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivitySafeModeBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityTextCheckBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityUserBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ActivityVoiceBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\DialogEditUserBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ItemCheckRecordBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ItemCourseBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ItemEmergencyContactBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ItemLocationBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ItemScanRecordBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ItemSosRecordBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\safetyassistant\databinding\ItemStudyRecordBinding.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\source\kapt\debug\com\example\safetyassistant\data\AppDatabase_Impl.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\source\kapt\debug\com\example\safetyassistant\data\dao\CheckResultDao_Impl.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\source\kapt\debug\com\example\safetyassistant\data\dao\GameScoreDao_Impl.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\source\kapt\debug\com\example\safetyassistant\data\dao\ScanRecordDao_Impl.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\source\kapt\debug\com\example\safetyassistant\data\dao\SOSRecordDao_Impl.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\source\kapt\debug\com\example\safetyassistant\data\dao\StudyRecordDao_Impl.java, C:\Users\18758\Desktop\SafetyAssistant\app\build\generated\source\kapt\debug\com\example\safetyassistant\data\dao\UserDao_Impl.java
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+i: found daemon on port 17862 (6345689 ms old), trying to connect
+i: connected to the daemon
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=C:\Users\18758\Desktop\SafetyAssistant\app\build\kotlin\compileDebugKotlin\cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=C:\Users\18758\Desktop\SafetyAssistant\app\build\kotlin\compileDebugKotlin\local-state\build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, outputFiles=[C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug, C:\Users\18758\Desktop\SafetyAssistant\app\build\kotlin\compileDebugKotlin\cacheable, C:\Users\18758\Desktop\SafetyAssistant\app\build\kotlin\compileDebugKotlin\local-state])
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/activities/GameActivity.kt:333:19 'onBackPressed(): Unit' is deprecated. Deprecated in Java
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/activities/SafeModeActivity.kt:73:41 'VIBRATOR_SERVICE: String' is deprecated. Deprecated in Java
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/activities/SafeModeActivity.kt:104:45 Elvis operator (?:) always returns the left operand of non-nullable type String
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/activities/TextCheckActivity.kt:64:21 Variable 'color' is never used
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/activities/TextCheckActivity.kt:64:28 Variable 'icon' is never used
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/activities/VoiceActivity.kt:265:21 Variable 'color' is never used
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/utils/LocationService.kt:58:26 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/utils/LocationService.kt:65:34 'requestSingleUpdate(String, LocationListener, Looper?): Unit' is deprecated. Deprecated in Java
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/utils/LocationService.kt:78:30 'requestSingleUpdate(String, LocationListener, Looper?): Unit' is deprecated. Deprecated in Java
+w: file:///C:/Users/18758/Desktop/SafetyAssistant/app/src/main/java/com/example/safetyassistant/utils/LocationService.kt:124:38 'getFromLocation(Double, Double, Int): (Mutable)List<Address!>?' is deprecated. Deprecated in Java
+Resolve mutations for :app:compileDebugJavaWithJavac (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:compileDebugJavaWithJavac (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:compileDebugJavaWithJavac
+Custom actions are attached to task ':app:compileDebugJavaWithJavac'.
+Caching disabled for task ':app:compileDebugJavaWithJavac' because:
+  Build cache is disabled
+Task ':app:compileDebugJavaWithJavac' is not up-to-date because:
+  Output property 'destinationDirectory' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes has been removed.
+  Output property 'destinationDirectory' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes\com has been removed.
+  Output property 'destinationDirectory' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes\com\example has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:compileDebugJavaWithJavac'.
+Java compiler version 21 has deprecated support for compiling with source/target version 8.
+Try one of the following options:
+    1. [Recommended] Use Java toolchain with a lower language version
+    2. Set a higher source/target version
+    3. Use a lower version of the JDK running the build (if you're not using Java toolchain)
+For more details on how to configure these settings, see https://developer.android.com/build/jdks.
+To suppress this warning, set android.javaCompile.suppressSourceTargetDeprecationWarning=true in gradle.properties.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot'.
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\java', not found
+Compiling with JDK Java compiler API.
+c:\Users\18758\Desktop\SafetyAssistant\gradlew.bat : 璀﹀憡: [options] 婧愬€?8 宸茶繃鏃讹
+紝灏嗗湪鏈潵鍙戣鐗堜腑鍒犻櫎
+所在位置 行:1 字符: 1
++ c:\Users\18758\Desktop\SafetyAssistant\gradlew.bat :app:assembleDebug ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (璀﹀憡: [options] ...灏嗗湪鏈潵鍙戣鐗堜腑鍒犻櫎 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+璀﹀憡: [options] 鐩爣鍊?8 宸茶繃鏃讹紝灏嗗湪鏈潵鍙戣鐗堜腑鍒犻櫎
+璀﹀憡: [options] 瑕侀殣钘忔湁鍏冲凡杩囨椂閫夐」鐨勮鍛? 璇蜂娇鐢?-Xlint:-options銆?
+3 涓鍛?
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\resourceHashesCache.bin
+Class dependency analysis for incremental compilation took 0.268 secs.
+Created classpath snapshot for incremental compilation in 0.748 secs.
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\executionHistory\executionHistory.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\buildOutputCleanup\outputFiles.bin
+Resolve mutations for :app:processDebugJavaRes (Thread[#127,Execution worker Thread 3,5,main]) started.
+:app:processDebugJavaRes (Thread[#127,Execution worker Thread 3,5,main]) started.
+
+> Task :app:processDebugJavaRes
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\resources', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\resources', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\resources', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\resources', not found
+Caching disabled for task ':app:processDebugJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:processDebugJavaRes' is not up-to-date because:
+  Output property 'destinationDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\java_res\debug\processDebugJavaRes\out has been removed.
+  Output property 'destinationDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\java_res\debug\processDebugJavaRes\out\com has been removed.
+  Output property 'destinationDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\java_res\debug\processDebugJavaRes\out\com\example has been removed.
+  and more...
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\resources', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\resources', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\main\resources', not found
+file or directory 'C:\Users\18758\Desktop\SafetyAssistant\app\src\debug\resources', not found
+Resolve mutations for :app:mergeDebugJavaResource (Thread[#126,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugJavaResource (Thread[#126,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:dexBuilderDebug (Thread[#130,Execution worker Thread 6,5,main]) started.
+:app:dexBuilderDebug (Thread[#130,Execution worker Thread 6,5,main]) started.
+
+> Task :app:mergeDebugJavaResource
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\journal-1\file-access.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\.gradle\caches\8.13\fileHashes\resourceHashesCache.bin
+Caching disabled for task ':app:mergeDebugJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mergeDebugJavaResource' is not up-to-date because:
+  Output property 'cacheDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug-mergeJavaRes\zip-cache has been removed.
+  Output property 'cacheDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug-mergeJavaRes\zip-cache\+epkco2Ouhhoxoqqpnjo_w== has been removed.
+  Output property 'cacheDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\debug-mergeJavaRes\zip-cache\01RkPDr26rn8tmZ9AOfLgA== has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:mergeDebugJavaResource'.
+
+> Task :app:dexBuilderDebug
+Caching disabled for task ':app:dexBuilderDebug' because:
+  Build cache is disabled
+Task ':app:dexBuilderDebug' is not up-to-date because:
+  Output property 'externalLibsFromArtifactTransformsOutputs.dex' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\external_libs_dex_archive_with_artifact_transforms\debug\dexBuilderDebug\out has been removed.
+  Output property 'externalLibsOutputs.dex' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\external_libs_dex_archive\debug\dexBuilderDebug\out has been removed.
+  Output property 'mixedScopeOutputs.dex' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\mixed_scope_dex_archive\debug\dexBuilderDebug\out has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:dexBuilderDebug'.
+Dex builder is incremental : false 
+Processing input C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug
+Processing input C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug
+Processing input C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Dexing C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug
+Dexing C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug
+Dexing C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Processing input C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kotlin-classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\tmp\kapt3\classes\debug' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_0.jar'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_1.jar'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_2.jar'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_3.jar'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_4.jar'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_5.jar'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_6.jar'
+Dexing 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_7.jar'
+Done with all dex archive conversions
+Resolve mutations for :app:mergeProjectDexDebug (Thread[#130,Execution worker Thread 6,5,main]) started.
+:app:mergeProjectDexDebug (Thread[#138,Execution worker Thread 14,5,main]) started.
+
+> Task :app:mergeProjectDexDebug
+Caching disabled for task ':app:mergeProjectDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeProjectDexDebug' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug has been removed.
+  Output property 'outputDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\0 has been removed.
+  Output property 'outputDir' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\0\classes.dex has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:mergeProjectDexDebug'.
+Merging to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\0' with D8 from all or a subset of dex files in C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_0.jar, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_1.jar, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_2.jar, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_3.jar, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_4.jar, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_5.jar, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_6.jar, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\9e1d2af73b8d227bc912edcffd2377057c5a4d6f0429edc10f1e7cb7794b7f30_7.jar, and from all global synthetics files in 
+Merging to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\2' with D8 from all or a subset of dex files in C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\9' with D8 from all or a subset of dex files in C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\8' with D8 from all or a subset of dex files in C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\12' with D8 from all or a subset of dex files in C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\11' with D8 from all or a subset of dex files in C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\dex\debug\mergeProjectDexDebug\14' with D8 from all or a subset of dex files in C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Resolve mutations for :app:packageDebug (Thread[#128,Execution worker Thread 4,5,main]) started.
+:app:packageDebug (Thread[#128,Execution worker Thread 4,5,main]) started.
+
+> Task :app:packageDebug
+Custom actions are attached to task ':app:packageDebug'.
+Caching disabled for task ':app:packageDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:packageDebug' is not up-to-date because:
+  Output property 'ideModelOutputFile' file C:\Users\18758\Desktop\SafetyAssistant\app\build\outputs\apk\debug\output-metadata.json has been removed.
+  Output property 'incrementalFolder' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\packageDebug\tmp has been removed.
+  Output property 'incrementalFolder' file C:\Users\18758\Desktop\SafetyAssistant\app\build\intermediates\incremental\packageDebug\tmp\debug has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:packageDebug'.
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\18758\Desktop\SafetyAssistant\.gradle\8.13\fileHashes\resourceHashesCache.bin
+
+> Task :app:packageDebug FAILED
+w: Detected multiple Kotlin daemon sessions at kotlin\sessions
+
+[Incubating] Problems report is available at: file:///C:/Users/18758/Desktop/SafetyAssistant/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:packageDebug'.
+> Cannot access output property 'ideModelOutputFile' of task ':app:packageDebug
+'. Accessing unreadable inputs or outputs is not supported. Declare the task as
+ untracked by using Task.doNotTrackState(). For more information, please refer 
+to https://docs.gradle.org/8.13/userguide/incremental_build.html#sec:disable-st
+ate-tracking in the Gradle documentation.
+   > Failed to create MD5 hash for file 'C:\Users\18758\Desktop\SafetyAssistant
+\app\build\outputs\apk\debug\output-metadata.json' as it does not exist.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1m 36s
+39 actionable tasks: 9 executed, 30 up-to-date
+Watched directory hierarchies: [C:\Users\18758\Desktop\SafetyAssistant]

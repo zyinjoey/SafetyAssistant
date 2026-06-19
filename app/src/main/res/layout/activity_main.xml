@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:title="@string/main_title"
+            app:titleTextColor="@color/text_on_primary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium">
+
+            <!-- 用户信息卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_medium">
+
+                    <!-- 头像 -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/avatar_size"
+                        android:layout_height="@dimen/avatar_size"
+                        android:background="@color/primary_light"
+                        android:padding="12dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        app:shapeAppearanceOverlay="@style/CircleImageView"
+                        app:tint="@color/primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nickname"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/text_size_title"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="安全等级: "
+                                android:textColor="@color/text_secondary"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <TextView
+                                android:id="@+id/tv_security_level"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/security_level"
+                                android:textColor="@color/level_low"
+                                android:textSize="@dimen/text_size_medium"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:src="@android:drawable/ic_menu_more"
+                        android:contentDescription="@string/edit_profile"
+                        app:tint="@color/text_hint" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 功能模块标题 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="快捷功能"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+
+            <!-- 功能模块网格 - 第一行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <!-- 数字安全直播 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_live"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_live"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_menu_camera"
+                            android:contentDescription="@string/live_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/live_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 反诈文本检测 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_text_check"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_check"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:contentDescription="@string/text_check_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/text_check_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- 功能模块网格 - 第二行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <!-- 二维码扫描 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_qr_scan"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_scan"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_menu_camera"
+                            android:contentDescription="@string/qr_scan_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/qr_scan_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 地图导航 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_map"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_map"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_menu_mapmode"
+                            android:contentDescription="@string/map_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/map_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- 功能模块网格 - 第三行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <!-- 安全模式 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_safe_mode"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_safe"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_menu_share"
+                            android:contentDescription="@string/safe_mode_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/safe_mode_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 语音助手 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_voice"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_voice"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_btn_speak_now"
+                            android:contentDescription="@string/voice_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/voice_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- 功能模块网格 - 第四行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 历史记录 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_history"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_history"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_menu_recent_history"
+                            android:contentDescription="@string/history_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/history_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 反诈游戏 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_game"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/module_card_height"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/module_game"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/module_icon_size"
+                            android:layout_height="@dimen/module_icon_size"
+                            android:src="@android:drawable/ic_menu_help"
+                            android:contentDescription="@string/game_title"
+                            app:tint="@color/text_on_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/game_title"
+                            android:textColor="@color/text_on_primary"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- 底部安全提示 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                app:cardBackgroundColor="@color/primary_light"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_subtitle"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="守护您的数字安全"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_size_small" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
