@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@color/card_background">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -23,7 +23,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -34,20 +33,11 @@
             android:layout_weight="1"
             android:background="@android:color/black">
 
-            <ImageView
+            <VideoView
+                android:id="@+id/videoView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                android:src="@android:drawable/ic_media_play"
-                android:contentDescription="播放" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="点击播放"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/text_size_title" />
+                android:layout_gravity="center" />
 
         </FrameLayout>
 
@@ -55,23 +45,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/card_background"
             android:orientation="vertical"
             android:padding="@dimen/padding_medium">
 
             <TextView
                 android:id="@+id/tv_course_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_primary"
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:max="100"
+                android:progress="0" />
+
             <TextView
                 android:id="@+id/tv_course_desc"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
                 android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_size_medium" />
 

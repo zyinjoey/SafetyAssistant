@@ -4,27 +4,25 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.speech.RecognitionListener
-import android.speech.RecognizerIntent
-import android.speech.SpeechRecognizer
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.safetyassistant.R
 import com.example.safetyassistant.databinding.ActivityVoiceBinding
-import com.example.safetyassistant.models.CheckResult
+import com.example.safetyassistant.utils.BaiduSpeechManager
 import com.example.safetyassistant.utils.DataManager
 import com.example.safetyassistant.utils.PermissionUtils
 import com.example.safetyassistant.utils.TextCheckUtils
-import java.util.Locale
 
-class VoiceActivity : AppCompatActivity(), RecognitionListener {
+class VoiceActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityVoiceBinding
     private var isListening = false
-    private var speechRecognizer: SpeechRecognizer? = null
+    private lateinit var speechManager: BaiduSpeechManager
 
     companion object {
+        private const val TAG = "VoiceActivity"
         private const val MICROPHONE_PERMISSION_REQUEST = 3001
     }
 
@@ -34,6 +32,7 @@ class VoiceActivity : AppCompatActivity(), RecognitionListener {
         setContentView(binding.root)
 
         initView()
+        initSpeechManager()
         checkMicrophonePermission()
     }
 
@@ -56,20 +55,67 @@ class VoiceActivity : AppCompatActivity(), RecognitionListener {
 
         binding.btnDetect.setOnClickListener {
             val text = binding.tvResult.text.toString().replace("识别结果：", "")
-            if (text.isEmpty() || text == "正在聆听，请说话..." || text == "未能识别，请重试") {
+            if (text.isEmpty() || text == "正在聆听，请说话..." || text == "未能识别，请重试" || text == "尚未识别") {
                 Toast.makeText(this, "请先进行语音识别", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             detectScam(text)
         }
 
-        if (!SpeechRecognizer.isRecognitionAvailable(this)) {
-            binding.btnStartListen.isEnabled = false
-            binding.tvStatus.text = "当前设备不支持语音识别"
-            Toast.makeText(this, "当前设备不支持语音识别", Toast.LENGTH_LONG).show()
-        } else {
-            binding.tvStatus.text = "点击按钮开始语音识别"
-        }
+        binding.tvStatus.text = "点击按钮开始语音识别"
+    }
+
+    private fun initSpeechManager() {
+        speechManager = BaiduSpeechManager(this)
+        speechManager.setListener(object : BaiduSpeechManager.SpeechResultListener {
+            override fun onRecognizing(text: String) {
+                runOnUiThread {
+                    binding.tvResult.text = "识别中：$text"
+                }
+                Log.d(TAG, "正在识别: $text")
+            }
+
+            override fun onResult(text: String) {
+                runOnUiThread {
+                    binding.tvResult.text = "识别结果：$text"
+                }
+                Log.d(TAG, "识别成功: $text")
+                processVoiceCommand(text)
+            }
+
+            override fun onError(error: String) {
+                runOnUiThread {
+                    binding.tvResult.text = error
+                    isListening = false
+                    binding.tvStatus.text = "点击按钮开始语音识别"
+                    binding.ivMic.setColorFilter(getColor(R.color.module_voice))
+                    binding.btnStartListen.text = "开始识别"
+                    binding.btnDetect.isEnabled = true
+                    binding.progressVolume.progress = 0
+                }
+                Log.e(TAG, "识别错误: $error")
+                Toast.makeText(this@VoiceActivity, error, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onStarted() {
+                runOnUiThread {
+                    binding.tvStatus.text = "正在聆听..."
+                }
+                Log.d(TAG, "语音识别已启动")
+            }
+
+            override fun onFinished() {
+                runOnUiThread {
+                    isListening = false
+                    binding.tvStatus.text = "点击按钮开始语音识别"
+                    binding.ivMic.setColorFilter(getColor(R.color.module_voice))
+                    binding.btnStartListen.text = "开始识别"
+                    binding.btnDetect.isEnabled = true
+                    binding.progressVolume.progress = 0
+                }
+                Log.d(TAG, "语音识别已结束")
+            }
+        })
     }
 
     private fun checkMicrophonePermission() {
@@ -85,125 +131,24 @@ class VoiceActivity : AppCompatActivity(), RecognitionListener {
             return
         }
 
-        if (!SpeechRecognizer.isRecognitionAvailable(this)) {
-            Toast.makeText(this, "当前设备不支持语音识别", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this).apply {
-            setRecognitionListener(this@VoiceActivity)
-        }
-
-        val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-            putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-            putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.CHINESE)
-            putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1)
-            putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
-        }
-
         isListening = true
-        binding.tvStatus.text = getString(R.string.voice_listening)
+        binding.tvStatus.text = "正在启动语音识别..."
+        binding.tvResult.text = "正在聆听，请说话..."
         binding.ivMic.setColorFilter(getColor(R.color.danger_red))
         binding.btnStartListen.text = "停止"
-        binding.tvResult.text = "正在聆听，请说话..."
         binding.btnDetect.isEnabled = false
 
-        speechRecognizer?.startListening(intent)
+        Log.d(TAG, "启动百度语音识别")
+        speechManager.startListening()
     }
 
     private fun stopListening() {
         isListening = false
-        speechRecognizer?.stopListening()
-        speechRecognizer?.cancel()
-
-        binding.tvStatus.text = "点击按钮开始语音识别"
-        binding.ivMic.setColorFilter(getColor(R.color.module_voice))
-        binding.btnStartListen.text = "开始识别"
-        binding.btnDetect.isEnabled = true
-    }
-
-    override fun onReadyForSpeech(params: Bundle?) {
-        binding.tvStatus.text = "正在聆听..."
-    }
-
-    override fun onBeginningOfSpeech() {
-        binding.tvStatus.text = "正在录音..."
-        binding.tvResult.text = ""
-    }
-
-    override fun onRmsChanged(rmsdB: Float) {
-        val volume = (rmsdB / 10).coerceIn(0f, 1f)
-        binding.progressVolume.progress = (volume * 100).toInt()
-    }
-
-    override fun onBufferReceived(buffer: ByteArray?) {
-    }
-
-    override fun onEndOfSpeech() {
-        binding.tvStatus.text = "正在识别..."
-        binding.progressVolume.progress = 0
-    }
-
-    override fun onError(error: Int) {
-        isListening = false
-        binding.tvStatus.text = "点击按钮开始语音识别"
-        binding.ivMic.setColorFilter(getColor(R.color.module_voice))
-        binding.btnStartListen.text = "开始识别"
-        binding.progressVolume.progress = 0
-        binding.btnDetect.isEnabled = true
-
-        val errorMsg = when (error) {
-            SpeechRecognizer.ERROR_NETWORK -> "网络错误，请检查网络连接"
-            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "网络超时"
-            SpeechRecognizer.ERROR_AUDIO -> "音频错误"
-            SpeechRecognizer.ERROR_CLIENT -> "客户端错误"
-            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "缺少麦克风权限"
-            SpeechRecognizer.ERROR_SERVER -> "服务端错误"
-            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "识别器正忙"
-            SpeechRecognizer.ERROR_NO_MATCH -> "未识别到语音，请重试"
-            else -> "识别错误: $error"
-        }
-
-        binding.tvResult.text = errorMsg
-        Toast.makeText(this, errorMsg, Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onResults(results: Bundle?) {
-        isListening = false
-        binding.tvStatus.text = "识别完成"
-        binding.ivMic.setColorFilter(getColor(R.color.module_voice))
-        binding.btnStartListen.text = "开始识别"
-        binding.progressVolume.progress = 0
-        binding.btnDetect.isEnabled = true
-
-        results?.let {
-            val resultList = it.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
-            if (!resultList.isNullOrEmpty()) {
-                val recognizedText = resultList[0]
-                binding.tvResult.text = "识别结果：$recognizedText"
-                processVoiceCommand(recognizedText)
-            } else {
-                binding.tvResult.text = "未能识别，请重试"
-            }
-        } ?: run {
-            binding.tvResult.text = "未能识别，请重试"
-        }
-    }
-
-    override fun onPartialResults(partialResults: Bundle?) {
-        partialResults?.let {
-            val resultList = it.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
-            if (!resultList.isNullOrEmpty()) {
-                binding.tvResult.text = "识别中：${resultList[0]}"
-            }
-        }
-    }
-
-    override fun onEvent(eventType: Int, params: Bundle?) {
+        speechManager.stopListening()
     }
 
     private fun processVoiceCommand(text: String) {
-        val command = text.lowercase(Locale.CHINESE)
+        val command = text.lowercase(java.util.Locale.CHINA)
 
         val (action, target) = when {
             command.contains("二维码") || command.contains("扫描") || command.contains("扫码") -> {
@@ -242,8 +187,14 @@ class VoiceActivity : AppCompatActivity(), RecognitionListener {
                 .setTitle("语音指令")
                 .setMessage("识别到指令：$action\n\n是否执行？")
                 .setPositiveButton("执行") { _, _ ->
-                    startActivity(Intent(this, target))
-                    finish()
+                    try {
+                        val intent = Intent(this, target)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Log.e(TAG, "启动Activity失败: ${e.message}")
+                        Toast.makeText(this, "启动失败: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
                 }
                 .setNegativeButton("取消") { _, _ ->
                     binding.tvResult.text = "已取消"
@@ -262,7 +213,7 @@ class VoiceActivity : AppCompatActivity(), RecognitionListener {
         val result = TextCheckUtils.checkText(text)
         DataManager.saveCheckRecord(result)
 
-        val (title, color, icon) = when (result.riskLevel) {
+        val (title, _, icon) = when (result.riskLevel) {
             com.example.safetyassistant.models.RiskLevel.SAFE -> Triple(
                 getString(R.string.text_result_safe),
                 getColor(R.color.safe_green),
@@ -291,7 +242,7 @@ class VoiceActivity : AppCompatActivity(), RecognitionListener {
     private fun showWakeWordTip() {
         AlertDialog.Builder(this)
             .setTitle("语音助手使用说明")
-            .setMessage("使用方法：\n1. 点击「开始识别」按钮\n2. 对着麦克风说出指令\n3. 系统会实时识别您的语音\n\n支持的语音指令包括：\n• 打开二维码扫描\n• 诈骗短信检测\n• 联系紧急联系人\n• 查找附近派出所\n• 开启安全模式\n• 播放安全课程\n• 查看历史记录\n• 打开反诈游戏\n\n点击「诈骗检测」按钮可以对识别到的语音内容进行诈骗检测。\n\n注意：语音识别需要网络连接才能正常工作。")
+            .setMessage("使用方法：\n1. 点击「开始识别」按钮\n2. 对着麦克风说出指令\n3. 系统会自动识别您的语音\n\n支持的语音指令包括：\n• 打开二维码扫描\n• 诈骗短信检测\n• 联系紧急联系人\n• 查找附近派出所\n• 开启安全模式\n• 播放安全课程\n• 查看历史记录\n• 打开反诈游戏\n\n点击「诈骗检测」按钮可以对识别到的语音内容进行诈骗检测。\n\n注意：\n• 语音识别需要网络连接\n• 建议在安静环境下使用")
             .setPositiveButton(R.string.confirm, null)
             .show()
     }
@@ -313,7 +264,7 @@ class VoiceActivity : AppCompatActivity(), RecognitionListener {
 
     override fun onDestroy() {
         super.onDestroy()
-        stopListening()
-        speechRecognizer?.destroy()
+        speechManager.release()
+        Log.d(TAG, "VoiceActivity销毁")
     }
 }

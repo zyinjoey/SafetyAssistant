@@ -34,9 +34,7 @@ class LiveActivity : AppCompatActivity() {
             finish()
         }
 
-        // 课程列表
         courseAdapter = CourseAdapter { course ->
-            // 记录学习
             val record = StudyRecord(
                 id = java.util.UUID.randomUUID().toString(),
                 courseId = course.id,
@@ -45,9 +43,13 @@ class LiveActivity : AppCompatActivity() {
             )
             DataManager.saveStudyRecord(record)
 
-            // 模拟播放
             startActivity(Intent(this, LivePlayerActivity::class.java).apply {
+                putExtra("course_id", course.id)
                 putExtra("course_title", course.title)
+                putExtra("course_desc", course.description)
+                putExtra("course_type", course.type.name)
+                putExtra("lecturer", course.lecturer)
+                putExtra("duration", course.duration)
             })
         }
 
@@ -56,13 +58,12 @@ class LiveActivity : AppCompatActivity() {
     }
 
     private fun loadData() {
-        // 模拟直播课程数据
         courses.addAll(
             listOf(
                 Course(
                     id = "1",
                     title = "防范电信诈骗",
-                    description = "学习如何识别和防范电信诈骗",
+                    description = "学习如何识别和防范电信诈骗，包括常见的诈骗手段和防范方法",
                     type = CourseType.LIVE,
                     lecturer = "王警官",
                     viewerCount = 1256
@@ -70,26 +71,42 @@ class LiveActivity : AppCompatActivity() {
                 Course(
                     id = "2",
                     title = "识别钓鱼链接",
-                    description = "教你识别各种钓鱼网站和链接",
+                    description = "教你识别各种钓鱼网站和恶意链接，保护个人信息安全",
                     type = CourseType.VIDEO,
                     lecturer = "李老师",
-                    duration = 1800
+                    duration = 15
                 ),
                 Course(
                     id = "3",
                     title = "二维码安全知识",
-                    description = "了解二维码的潜在风险",
-                    type = CourseType.VIDEO,
+                    description = "了解二维码的潜在风险和安全使用方法",
+                    type = CourseType.LIVE,
                     lecturer = "张专家",
-                    duration = 1500
+                    viewerCount = 890
                 ),
                 Course(
                     id = "4",
                     title = "个人隐私保护",
-                    description = "保护个人信息和隐私安全",
+                    description = "保护个人信息和隐私安全的基本方法",
                     type = CourseType.LIVE,
                     lecturer = "刘教授",
-                    viewerCount = 890
+                    viewerCount = 756
+                ),
+                Course(
+                    id = "5",
+                    title = "银行卡安全",
+                    description = "如何保护银行卡和个人账户信息安全",
+                    type = CourseType.LIVE,
+                    lecturer = "陈老师",
+                    viewerCount = 623
+                ),
+                Course(
+                    id = "6",
+                    title = "网络购物防骗",
+                    description = "网购时如何识别和防范各类诈骗陷阱",
+                    type = CourseType.LIVE,
+                    lecturer = "赵警官",
+                    viewerCount = 542
                 )
             )
         )
@@ -139,7 +156,7 @@ class LiveActivity : AppCompatActivity() {
                     binding.chipType.text = "直播"
                     binding.chipType.setBackgroundColor(getColor(com.example.safetyassistant.R.color.danger_red))
                 } else {
-                    binding.tvViewerCount.text = "${course.duration / 60}分钟"
+                    binding.tvViewerCount.text = "${course.duration}秒"
                     binding.chipType.text = "视频"
                     binding.chipType.setBackgroundColor(getColor(com.example.safetyassistant.R.color.primary))
                 }
